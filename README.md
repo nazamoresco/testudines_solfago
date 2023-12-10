@@ -1,20 +1,65 @@
-# testudines_solfago
+# Testudines Solfago
 
-A new Flutter project.
+A Flutter and Flame game.
 
-## Getting Started
+## Description:
 
-This project is a starting point for a Flutter application.
+In Testudines Solfago, players play as a Testudines Solfago, a mythical sun-eating turtle. 
+This game is a survival, where players must keep a balance of the turtles temperature by eating suns and avoiding meteors.
 
-A few resources to get you started if this is your first Flutter project:
+## How to Play
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* Controls 
+  * Move: Arrow keys or WASD
+  * Restart Game: Spacebar
+* Objective: Eat 20 suns.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Theme
 
+The theme, 'Hot and Cold,' immediately brought to mind the concept of temperature, specifically in relation to living organisms and their need for homeostasis. 
+Reptiles face a unique challenge, being unable to internally regulate their temperature. 
+This sparked the idea of a cosmic turtle that maintains its body heat by consuming suns - a delicate balance between overheating and becoming too cold.
+
+In the game, this concept is embodied by a thermostat that displays the temperature of the turtle. 
+Consuming suns raises its temperature, while avoiding them causes a drop. 
+A red overlay accompanied by the sound of burning indicates overheating.
+A blue overlay with the sound of a cold wind signifies a drop in temperature.
+
+## Code
+
+https://github.com/nazamoresco/testudines_solfago
+
+## Credits
+
+* Music - Lena Orsa
+https://freesound.org/people/lena_orsa/
+
+## Limitation
+
+I picked the *multiple endings* limitation, these are the endings:
+1. Super hot: You ate too many suns, you become one yourself.
+2. Super cold: Your temperature drop too low, you die of hypothermia.
+3. Meteor Crash: Pierced by a meteor, you die.
+4. Spawining eggs: You ate 20 suns and are ready to spawn your eggs. You won.
+
+## Assets
+
+### Graphics
+
+Creative Commons images extracted from Wikimedia Commons, I crop them to create the assets and animations.
+
+### Audio
+
+Create Commons from Freesound, I have to credit the author of the Tango Lena Orsa!
+
+## Testing
+
+I have added easy access to ending, because some of them can be tricky to obtain:
+* F9: Spawning eggs ending
+* F8: Too hot ending
+* F7: Too cold ending
+
+## Sources
 
 - Sea turtle illustration
 https://commons.wikimedia.org/wiki/File:Vintage_turtle_illustration_(46733122082).jpg
@@ -51,21 +96,3 @@ https://freesound.org/people/qubodup/sounds/442677/
 
 - Crecendo
 https://freesound.org/people/Jerimee/sounds/521776/
-
-What your game submission should include:
-A web build that runs on either itch (https://docs.flame-engine.org/latest/flame/platforms.html#deploy-your-game-to-itch-io) or on GitHub pages (https://docs.flame-engine.org/latest/flame/platforms.html#deploy-your-game-to-github-pages), or if none of those work, an APK for Android.
-A description of your game and how you is uses the theme and the limitations.
-Instructions of how to play the game, like what the controls are etc.
-Screenshots of your game.
-If you are the submitter, add your team members to the submission.
-
-Remember, only one team member should submit the game.
-
-
-
-- Arrow keys or wasd too move.
-- Space - restart game.
-- Endings:
-  * F9: Spawning eggs ending.
-  * F8: Too hot ending.
-  * F7: Too cold ending.
