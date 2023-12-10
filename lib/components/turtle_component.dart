@@ -160,7 +160,6 @@ class TurtleComponent extends SpriteAnimationComponent
 
     if (other is SunComponent) {
       FlameAudio.play('crecendo.wav');
-      FlameAudio.play('burning.wav');
       temperature += 15;
       eatenSunsCount += 1;
     } else if (other is MeteorComponent) {
