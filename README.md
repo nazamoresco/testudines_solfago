@@ -61,3 +61,11 @@ If you are the submitter, add your team members to the submission.
 
 Remember, only one team member should submit the game.
 
+
+
+- Arrow keys or wasd too move.
+- Space - restart game.
+- Endings:
+  * F9: Spawning eggs ending.
+  * F8: Too hot ending.
+  * F7: Too cold ending.

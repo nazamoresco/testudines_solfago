@@ -77,8 +77,16 @@ class MyGame extends FlameGame
       turtleComponent.pointBack();
     }
 
-    if (keysPressed.contains(LogicalKeyboardKey.keyO)) {
+    if (keysPressed.contains(LogicalKeyboardKey.f9)) {
       spawningEnding();
+    }
+
+    if (keysPressed.contains(LogicalKeyboardKey.f8)) {
+      turtleComponent.tooHot();
+    }
+
+    if (keysPressed.contains(LogicalKeyboardKey.f7)) {
+      turtleComponent.tooCold();
     }
 
     return KeyEventResult.handled;

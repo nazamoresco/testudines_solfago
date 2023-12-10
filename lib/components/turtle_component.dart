@@ -38,25 +38,9 @@ class TurtleComponent extends SpriteAnimationComponent
         temperature -= 5;
 
         if (temperature == 0) {
-          game.superColdEnding();
-          direction *= 0.1;
+          tooCold();
         } else if (temperature > 120) {
-          animation = null;
-          direction *= 0;
-
-          add(
-            ExplosionComponent()
-              ..anchor = Anchor.center
-              ..position = size / 2,
-          );
-
-          game.superHotEnding();
-          await Future.delayed(const Duration(seconds: 1));
-          angle = 0;
-          animation = SpriteAnimation.spriteList(
-            [Sprite(Flame.images.fromCache('sun.png'))],
-            stepTime: 1,
-          );
+          await tooHot();
         } else if (temperature < 40) {
           FlameAudio.play('wind.mp3');
           game.overlays.add(Overlays.freezing.toString());
@@ -70,6 +54,30 @@ class TurtleComponent extends SpriteAnimationComponent
         }
       },
       repeat: true,
+    );
+  }
+
+  void tooCold() {
+    game.superColdEnding();
+    direction *= 0.1;
+  }
+
+  Future<void> tooHot() async {
+    animation = null;
+    direction *= 0;
+
+    add(
+      ExplosionComponent()
+        ..anchor = Anchor.center
+        ..position = size / 2,
+    );
+
+    game.superHotEnding();
+    await Future.delayed(const Duration(seconds: 1));
+    angle = 0;
+    animation = SpriteAnimation.spriteList(
+      [Sprite(Flame.images.fromCache('sun.png'))],
+      stepTime: 1,
     );
   }
 
