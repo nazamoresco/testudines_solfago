@@ -20,18 +20,16 @@ class _IntroScreenState extends State<IntroScreen> {
   Completer assetLoading = Completer();
   @override
   void initState() {
-    assetLoading.complete(
-      Future.wait([
-        FlameAudio.audioCache.loadAll([
-          'tango.mp3',
-          'wind.mp3',
-          'gong.wav',
-          'crecendo.wav',
-          'burning.wav',
-        ]),
-        Flame.images.loadAllImages(),
+    Future.wait([
+      FlameAudio.audioCache.loadAll([
+        'tango.mp3',
+        'wind.mp3',
+        'gong.wav',
+        'crecendo.wav',
+        'burning.wav',
       ]),
-    );
+      Flame.images.loadAllImages(),
+    ]).then((value) => assetLoading.complete(value));
 
     super.initState();
   }
@@ -44,7 +42,7 @@ class _IntroScreenState extends State<IntroScreen> {
       });
     } else if (!assetLoading.isCompleted) {
       setState(() {
-        punchlineOpacity = 1;
+        loadingOpactiy = 1;
       });
 
       assetLoading.future.whenComplete(
