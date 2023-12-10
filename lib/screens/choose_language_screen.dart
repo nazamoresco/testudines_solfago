@@ -13,8 +13,10 @@ class ChooseLanguageScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Choose language - Elige lenguaje',
-              style: TextStyles.middle.style),
+          Text(
+            'Choose language - Elige lenguaje',
+            style: TextStyles.middle.style,
+          ),
           const SizedBox(height: 16.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +51,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );

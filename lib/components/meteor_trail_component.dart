@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class MeteorTrailComponent extends PositionComponent {
   final random = Random();
   final Tween<double> horizontalNoise = Tween(begin: -15, end: 0);
-  final Tween<double> verticalNoise = Tween(begin: -0.5, end: 0.5); // TODO: Reduced here, check
+  final Tween<double> verticalNoise = Tween(begin: -0.5, end: 0.5);
   final ColorTween colorTween;
 
   MeteorTrailComponent({
