@@ -88,9 +88,9 @@ class MyGame extends FlameGame
   }
 
   @override
-  void onTapUp(TapUpEvent event) {
+  void onTapDown(TapDownEvent event) {
     turtleComponent.moveTo(event.localPosition);
-    super.onTapUp(event);
+    super.onTapDown(event);
   }
 
   void meteorCrashEnding() {
