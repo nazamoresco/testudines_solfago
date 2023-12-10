@@ -32,7 +32,7 @@ class ChooseLanguageScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey),
                   ),
-                  child: Text('Ingles', style: TextStyles.middle.style),
+                  child: Text('English', style: TextStyles.middle.style),
                 ),
               ),
               const SizedBox(width: 16.0),
