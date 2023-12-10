@@ -39,7 +39,7 @@ class TurtleComponent extends SpriteAnimationComponent
 
         if (temperature == 0) {
           tooCold();
-        } else if (temperature > 120) {
+        } else if (temperature > 110) {
           await tooHot();
         } else if (temperature < 40) {
           FlameAudio.play('wind.mp3');
@@ -160,6 +160,7 @@ class TurtleComponent extends SpriteAnimationComponent
 
     if (other is SunComponent) {
       FlameAudio.play('crecendo.wav');
+      FlameAudio.play('burning.wav');
       temperature += 15;
       eatenSunsCount += 1;
     } else if (other is MeteorComponent) {
