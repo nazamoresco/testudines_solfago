@@ -9,7 +9,9 @@ enum Contents {
   superCold,
   tapToRetry,
   spawning,
-  tapToReplay;
+  tapToReplay,
+  loading,
+  ;
 
   String get({int? eggsEaten}) {
     switch (this) {
@@ -68,6 +70,13 @@ enum Contents {
             return 'Manten presionada la pantalla o apreta la barria espaciadora para jugar de nuevo';
           case Languages.en:
             return 'Long press the screen or press the bar space to play again';
+        }
+      case Contents.loading:
+        switch (language) {
+          case Languages.es:
+            return 'Estamos cargando las imagenes...';
+          case Languages.en:
+            return "We're loading the assets...";
         }
     }
   }

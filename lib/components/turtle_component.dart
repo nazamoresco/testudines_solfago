@@ -87,7 +87,7 @@ class TurtleComponent extends SpriteAnimationComponent
 
     animation = SpriteSheet(
       image: Flame.images.fromCache('turtle-animation.png'),
-      srcSize: Vector2(1024.0, 1024.0),
+      srcSize: Vector2(512, 512),
     ).createAnimation(row: 0, stepTime: 0.1, to: 12);
 
     add(

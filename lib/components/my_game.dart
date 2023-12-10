@@ -36,15 +36,6 @@ class MyGame extends FlameGame
 
   @override
   Future<void> onLoad() async {
-    await FlameAudio.audioCache.loadAll([
-      'tango.mp3',
-      'wind.mp3',
-      'gong.wav',
-      'crecendo.wav',
-      'burning.wav',
-    ]);
-    await Flame.images.loadAllImages();
-
     FlameAudio.bgm.stop();
     FlameAudio.bgm.play('tango.mp3', volume: 0.7);
     await create();
@@ -64,16 +55,20 @@ class MyGame extends FlameGame
       return KeyEventResult.ignored;
     }
 
-    if (keysPressed.contains(LogicalKeyboardKey.arrowLeft)) {
+    if (keysPressed.contains(LogicalKeyboardKey.arrowLeft) ||
+        keysPressed.contains(LogicalKeyboardKey.keyA)) {
       turtleComponent.pointLeft();
     }
-    if (keysPressed.contains(LogicalKeyboardKey.arrowRight)) {
+    if (keysPressed.contains(LogicalKeyboardKey.arrowRight) ||
+        keysPressed.contains(LogicalKeyboardKey.keyD)) {
       turtleComponent.pointRight();
     }
-    if (keysPressed.contains(LogicalKeyboardKey.arrowUp)) {
+    if (keysPressed.contains(LogicalKeyboardKey.arrowUp) ||
+        keysPressed.contains(LogicalKeyboardKey.keyW)) {
       turtleComponent.pointForward();
     }
-    if (keysPressed.contains(LogicalKeyboardKey.arrowDown)) {
+    if (keysPressed.contains(LogicalKeyboardKey.arrowDown) ||
+        keysPressed.contains(LogicalKeyboardKey.keyS)) {
       turtleComponent.pointBack();
     }
 
